@@ -1,0 +1,2 @@
+Letakkan file CV PDF Anda di folder ini dengan nama CV-Ilyas.pdf.
+Jika nama file berbeda, ubah cvFile di assets/js/config.js.
