@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="PEJUANGMUDA-LOG: aplikasi logbook kegiatan magang berbasis browser"
+    />
+    <title>PEJUANGMUDA-LOG — Logbook Kegiatan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <span class="brand-icon"><i class="bi bi-journal-check"></i></span
+          ><span
+            >PEJUANGMUDA<span class="brand-accent">-LOG</span
+            ><small>Logbook Kegiatan Digital</small></span
+          >
+        </div>
+        <nav class="nav flex-column gap-1" id="nav">
+          <button class="nav-link active" data-page="dashboard">
+            <i class="bi bi-grid-1x2"></i> Dashboard</button
+          ><button class="nav-link" data-page="logbook">
+            <i class="bi bi-journal-text"></i> Logbook Harian</button
+          ><button class="nav-link" data-page="kalender">
+            <i class="bi bi-calendar3"></i> Kalender Kegiatan</button
+          ><button class="nav-link" data-page="dokumentasi">
+            <i class="bi bi-images"></i> Dokumentasi</button
+          ><button class="nav-link" data-page="laporan">
+            <i class="bi bi-file-earmark-bar-graph"></i> Laporan</button
+          ><button class="nav-link" data-page="profil">
+            <i class="bi bi-person-badge"></i> Profil Peserta
+          </button>
+        </nav>
+        <div class="side-note">
+          <i class="bi bi-info-circle"></i> Project portofolio independen, bukan
+          aplikasi resmi Kemensos.
+        </div>
+      </aside>
+      <div class="main-wrap">
+        <header class="topbar">
+          <button
+            class="btn btn-outline-secondary d-lg-none"
+            id="menuBtn"
+            aria-label="Buka menu"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+          <div>
+            <div class="eyebrow">DIGITAL INTERNSHIP LOGBOOK</div>
+            <h1 id="pageTitle">Dashboard</h1>
+          </div>
+          <div class="top-actions">
+            <button
+              id="themeBtn"
+              class="btn btn-outline-secondary"
+              aria-label="Ganti tema"
+            >
+              <i class="bi bi-moon-stars"></i></button
+            ><button id="addTop" class="btn btn-red">
+              <i class="bi bi-plus-lg"></i>
+              <span class="d-none d-sm-inline">Tambah Kegiatan</span>
+            </button>
+          </div>
+        </header>
+        <main class="content">
+          <section class="page active" id="page-dashboard">
+            <div class="welcome">
+              <div>
+                <div class="eyebrow text-white-50">SELAMAT DATANG</div>
+                <h2>Setiap Aksi, Ada Ceritanya.</h2>
+                <p>
+                  Kelola catatan kegiatan, dokumentasi, dan laporan magang dalam
+                  satu tempat.
+                </p>
+                <button class="btn btn-light" data-action="add">
+                  <i class="bi bi-plus-circle"></i> Catat kegiatan baru
+                </button>
+              </div>
+              <img
+                src="assets/images/cover-4k.jpg"
+                alt="Ilustrasi PEJUANGMUDA-LOG"
+              />
+            </div>
+            <div class="row g-3 mt-1" id="stats"></div>
+            <div class="row g-4 mt-1">
+              <div class="col-lg-7">
+                <div class="panel">
+                  <div class="panel-head">
+                    <h3>Aktivitas 7 Hari Terakhir</h3>
+                    <span class="badge text-bg-danger-subtle">Grafik</span>
+                  </div>
+                  <div class="chart-wrap">
+                    <canvas id="activityChart"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="panel">
+                  <div class="panel-head">
+                    <h3>Kegiatan Terbaru</h3>
+                    <button class="btn btn-sm btn-link" data-go="logbook">
+                      Lihat semua
+                    </button>
+                  </div>
+                  <div id="recentList"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page" id="page-logbook">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">CATATAN AKTIVITAS</div>
+                <h2>Logbook Harian</h2>
+                <p>Kelola semua kegiatan lapangan dan administrasi.</p>
+              </div>
+              <button class="btn btn-red" data-action="add">
+                <i class="bi bi-plus-lg"></i> Tambah Kegiatan
+              </button>
+            </div>
+            <div class="panel">
+              <div class="row g-2 mb-3">
+                <div class="col-md-7">
+                  <input
+                    id="search"
+                    class="form-control"
+                    placeholder="Cari nama kegiatan, lokasi, atau kategori..."
+                  />
+                </div>
+                <div class="col-md-5">
+                  <select id="filterStatus" class="form-select">
+                    <option value="">Semua status</option>
+                    <option>Rencana</option>
+                    <option>Proses</option>
+                    <option>Selesai</option>
+                  </select>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table align-middle">
+                  <thead>
+                    <tr>
+                      <th>Tanggal</th>
+                      <th>Kegiatan</th>
+                      <th>Lokasi</th>
+                      <th>Durasi</th>
+                      <th>Status</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="logRows"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="page" id="page-kalender">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">JADWAL KEGIATAN</div>
+                <h2>Kalender Kegiatan</h2>
+                <p>Lihat aktivitas berdasarkan tanggal.</p>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-outline-secondary" id="prevMonth">
+                  <i class="bi bi-chevron-left"></i></button
+                ><span
+                  class="btn btn-outline-secondary disabled"
+                  id="monthLabel"
+                ></span
+                ><button class="btn btn-outline-secondary" id="nextMonth">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="panel">
+              <div id="calendar" class="calendar"></div>
+              <div id="calendarDetail" class="mt-3"></div>
+            </div>
+          </section>
+          <section class="page" id="page-dokumentasi">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">GALERI KEGIATAN</div>
+                <h2>Dokumentasi</h2>
+                <p>Foto yang diunggah melalui formulir kegiatan.</p>
+              </div>
+            </div>
+            <div class="row g-3" id="gallery"></div>
+          </section>
+          <section class="page" id="page-laporan">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">REKAPITULASI</div>
+                <h2>Laporan Kegiatan</h2>
+                <p>Pilih periode untuk mencetak atau menyimpan sebagai PDF.</p>
+              </div>
+              <button class="btn btn-red" id="printBtn">
+                <i class="bi bi-printer"></i> Cetak / Simpan PDF
+              </button>
+            </div>
+            <div class="panel">
+              <div class="row g-3 mb-4">
+                <div class="col-md-5">
+                  <label class="form-label">Dari tanggal</label
+                  ><input type="date" id="reportStart" class="form-control" />
+                </div>
+                <div class="col-md-5">
+                  <label class="form-label">Sampai tanggal</label
+                  ><input type="date" id="reportEnd" class="form-control" />
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                  <button
+                    id="generateReport"
+                    class="btn btn-outline-danger w-100"
+                  >
+                    Tampilkan
+                  </button>
+                </div>
+              </div>
+              <div id="reportOutput"></div>
+            </div>
+          </section>
+          <section class="page" id="page-profil">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">IDENTITAS PESERTA</div>
+                <h2>Profil Peserta</h2>
+                <p>Data profil digunakan pada laporan kegiatan.</p>
+              </div>
+            </div>
+            <div class="panel profile-panel">
+              <form id="profileForm" class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Nama peserta</label
+                  ><input name="nama" class="form-control" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Asal perguruan tinggi</label
+                  ><input name="kampus" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Lokasi penugasan</label
+                  ><input name="lokasi" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Periode kegiatan</label
+                  ><input
+                    name="periode"
+                    class="form-control"
+                    placeholder="Contoh: Agustus – Desember 2021"
+                  />
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-red" type="submit">
+                    <i class="bi bi-check2-circle"></i> Simpan Profil
+                  </button>
+                </div>
+              </form>
+              <hr />
+              <div class="d-flex flex-wrap gap-2">
+                <button id="exportBtn" class="btn btn-outline-secondary">
+                  <i class="bi bi-download"></i> Cadangkan Data (JSON)</button
+                ><label class="btn btn-outline-secondary mb-0"
+                  ><i class="bi bi-upload"></i> Pulihkan Data
+                  <input
+                    type="file"
+                    id="importFile"
+                    accept="application/json"
+                    hidden
+                /></label>
+              </div>
+              <p class="small text-secondary mt-3 mb-0">
+                Data tersimpan hanya di browser ini. Simpan cadangan secara
+                berkala. Jangan masukkan informasi pribadi sensitif atau
+                dokumentasi rahasia pada demo publik.
+              </p>
+            </div>
+          </section>
+        </main>
+        <footer>
+          © 2021 ILYAS TAUFIQU RAHMAN - PEJUANGMUDA-LOG · Project portofolio
+          independen, terinspirasi pengalaman program Pejuang Muda.
+        </footer>
+      </div>
+    </div>
+    <div class="modal fade" id="activityModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Tambah Kegiatan</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <form id="activityForm">
+            <div class="modal-body">
+              <input type="hidden" name="id" />
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Tanggal *</label
+                  ><input
+                    name="tanggal"
+                    type="date"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Status *</label
+                  ><select name="status" class="form-select" required>
+                    <option>Rencana</option>
+                    <option>Proses</option>
+                    <option>Selesai</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Nama kegiatan *</label
+                  ><input
+                    name="judul"
+                    class="form-control"
+                    required
+                    maxlength="120"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Kategori</label
+                  ><select name="kategori" class="form-select">
+                    <option>Observasi Lapangan</option>
+                    <option>Survei Masyarakat</option>
+                    <option>Koordinasi Tim</option>
+                    <option>Administrasi</option>
+                    <option>Pendampingan</option>
+                    <option>Lainnya</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Lokasi</label
+                  ><input name="lokasi" class="form-control" maxlength="120" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Jam mulai</label
+                  ><input name="mulai" type="time" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Jam selesai</label
+                  ><input name="selesai" type="time" class="form-control" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Deskripsi kegiatan</label
+                  ><textarea
+                    name="deskripsi"
+                    class="form-control"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Hasil kegiatan</label
+                  ><textarea
+                    name="hasil"
+                    class="form-control"
+                    rows="2"
+                  ></textarea>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Kendala & solusi</label
+                  ><textarea
+                    name="kendala"
+                    class="form-control"
+                    rows="2"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <label class="form-label"
+                    >Dokumentasi (gambar, maks. 1,5 MB)</label
+                  ><input
+                    id="photoInput"
+                    type="file"
+                    accept="image/*"
+                    class="form-control"
+                  />
+                  <div class="form-text">
+                    Foto disimpan di IndexedDB. Hapus foto dari entri melalui
+                    tombol hapus dokumentasi.
+                  </div>
+                  <div id="photoHint" class="small mt-2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                data-bs-dismiss="modal"
+              >
+                Batal</button
+              ><button type="submit" class="btn btn-red">
+                Simpan Kegiatan
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="toast" class="toast align-items-center border-0" role="status">
+        <div class="d-flex">
+          <div class="toast-body" id="toastText"></div>
+          <button
+            type="button"
+            class="btn-close me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Tutup"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

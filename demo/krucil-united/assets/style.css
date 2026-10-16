@@ -1,0 +1,52 @@
+:root{--gold:#ffbc17;--gold2:#e59a05;--bg:#070707;--panel:#131313;--muted:#c9c9c9}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:75px}body{background:var(--bg);color:#fff;font-family:Inter,sans-serif}h1,h2,h3,.brand,.btn,.tagline,.slogan{font-family:'Barlow Condensed',sans-serif;font-weight:900}h2{font-size:clamp(2.8rem,6vw,5rem);line-height:1}h2 span,.brand span,h1 span{color:var(--gold)}p{color:#dedede;line-height:1.8}.gold{color:var(--gold)}.navbar{background:rgba(4,4,4,.96);border-bottom:1px solid #252525;padding:13px 0;transition:.25s}.navbar.scrolled{box-shadow:0 5px 25px #000b}.brand{font-size:1.65rem;font-style:italic;white-space:nowrap}.brand-mark{font-size:1.4rem}.nav-link{font:800 .83rem 'Barlow Condensed',sans-serif;letter-spacing:.7px;color:#fff!important}.nav-link:hover,.nav-link.active{color:var(--gold)!important}.btn{border-radius:2px;letter-spacing:1px;padding:11px 22px;font-size:1rem}.btn-gold{border:1px solid var(--gold);color:var(--gold);background:#0006}.btn-gold:hover{background:var(--gold);color:#090909}.btn-outline-light{border-radius:2px}.hero{min-height:790px;position:relative;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 25% 50%,#493008 0%,transparent 40%),radial-gradient(ellipse at 85% 10%,#3e310c 0%,transparent 32%),linear-gradient(140deg,#101010,#050505 70%)}.hero:before,.hero:after{content:"";position:absolute;inset:auto -10% -100px;height:230px;background:linear-gradient(165deg,transparent 40%,#b87700 42%,#ffc32e 44%,transparent 48%);opacity:.7;transform:rotate(-3deg)}.hero:after{transform:scaleX(-1) rotate(-3deg)}.stadium-lights{position:absolute;inset:0;background:repeating-linear-gradient(100deg,transparent 0 110px,#ffb50008 111px 113px);pointer-events:none}.hero-inner{position:relative;z-index:1;padding-top:125px;padding-bottom:100px}.tiger-frame{min-height:450px;position:relative;display:grid;place-items:center}.tiger-glow{position:absolute;width:80%;aspect-ratio:1;background:#e69a0a40;filter:blur(75px);border-radius:50%}.tiger-emoji{font-size:clamp(12rem,26vw,24rem);filter:drop-shadow(0 18px 12px #000);line-height:1;transform:scaleX(-1)}.ball{position:absolute;bottom:10px;left:48%;font-size:7rem;filter:drop-shadow(0 9px 7px #000)}.eyebrow,.section-kicker{color:var(--gold);font-weight:800;letter-spacing:2px;font-size:.82rem;margin-bottom:18px}.section-kicker:before{content:"";display:inline-block;background:var(--gold);height:3px;width:35px;vertical-align:middle;margin-right:12px}.hero h1{font-size:clamp(5rem,10vw,9rem);line-height:.8;font-style:italic;text-shadow:4px 6px 0 #242424;margin-bottom:30px}.hero h1 span{display:block}.tagline{font-size:clamp(1.5rem,3vw,2.3rem);font-style:italic;line-height:1.1;transform:rotate(-3deg);margin:20px 0 35px}.hero-location{font-weight:700;font-size:.9rem;line-height:1.8;margin-bottom:30px}.hero-location i{color:var(--gold);font-size:1.4rem;margin-right:10px}.scroll-down{position:absolute;z-index:2;bottom:24px;left:50%;transform:translateX(-50%);color:#fff;text-align:center;text-decoration:none;font:700 .75rem Inter}.scroll-down i{display:block;font-size:1.6rem}.section{padding:100px 0}.about{background:radial-gradient(ellipse at 80% 50%,#262626,#0a0a0a 70%)}.crest{width:min(350px,90%);aspect-ratio:.9;margin:auto;background:linear-gradient(145deg,#272727,#030303);border:12px ridge var(--gold);clip-path:polygon(50% 0,95% 16%,95% 70%,50% 100%,5% 70%,5% 16%);display:flex;align-items:center;justify-content:center;flex-direction:column;filter:drop-shadow(0 15px 10px #000)}.crest-head{color:var(--gold);font-size:2rem}.crest-tiger{font-size:7rem;line-height:1.3}.crest strong{font:900 4rem 'Barlow Condensed';line-height:1}.crest span{font:900 2rem 'Barlow Condensed';color:var(--gold);letter-spacing:8px}.crest small{font-size:.6rem;letter-spacing:3px}.slogan{text-align:center;color:var(--gold);font-size:2rem;font-style:italic;margin-top:20px}.values{padding:38px 0;border-top:1px solid #39301a;border-bottom:1px solid #39301a;background:#090909}.value{display:flex;gap:15px;min-height:100px;border-right:1px solid #303030;padding-right:10px}.value i{font-size:2.1rem;color:var(--gold)}.value h3{font-size:1.2rem;color:var(--gold)}.value p{font-size:.77rem;line-height:1.6;margin:0}.team{background:linear-gradient(120deg,#171717,#030303)}.team-visual{height:360px;display:flex;flex-direction:column;justify-content:center;align-items:center;background:radial-gradient(circle at center,#4b360d,#111 60%,#050505);border:1px solid #45310c;overflow:hidden}.team-players{font-size:clamp(3rem,7vw,5rem);white-space:nowrap;filter:grayscale(.4)}.team-visual-caption{font:900 2.2rem 'Barlow Condensed';color:var(--gold)}.letter-spaced{letter-spacing:5px;font-weight:800}.schedule{background:#090909}.empty-panel{padding:60px 20px;text-align:center;border:1px solid #47360e;background:linear-gradient(135deg,#1d1a11,#090909)}.empty-panel i{font-size:3rem;color:var(--gold)}.empty-panel h3{margin-top:12px}.news{background:#050505}.news-card{height:100%;background:#101010;border:1px solid #333;transition:transform .2s,border-color .2s}.news-card:hover{transform:translateY(-6px);border-color:var(--gold)}.news-art{height:190px;display:grid;place-items:center;font-size:5rem;color:var(--gold);background:linear-gradient(135deg,#332505,#080808)}.art-two{background:linear-gradient(145deg,#222,#493009)}.art-three{background:linear-gradient(145deg,#121212,#29251a)}.news-body{padding:23px}.news-body small{color:var(--gold);font-weight:800}.news-body h3{font-size:1.6rem;margin-top:12px}.news-body p{font-size:.85rem}.content-note{font-size:.75rem;color:#a4a4a4;margin-top:22px}.gallery{background:#111}.gallery-tile{height:220px;border:1px solid #4d3912;background:repeating-linear-gradient(135deg,#171717,#171717 15px,#1b180f 16px,#1b180f 30px);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}.gallery-tile i{font-size:4rem;color:var(--gold)}.gallery-tile span{font:900 1.5rem 'Barlow Condensed'}.contact{background:radial-gradient(ellipse at right,#352406,#090909 65%)}.contact-box{border:1px solid var(--gold);padding:35px;text-align:center;background:#0b0b0b}.contact-box h3{font-size:2.2rem}.contact-box small{display:block;color:#aaa;margin-top:18px}footer{padding:35px 0 20px;background:#020202}footer hr{border-color:#333;margin:25px 0}.footer-motto{font:900 1.6rem 'Barlow Condensed';font-style:italic;color:var(--gold);line-height:1.1}@media(max-width:991px){.navbar-collapse{padding:18px 0}.hero{min-height:900px}.hero-inner{padding-top:110px}.tiger-frame{min-height:270px}.tiger-emoji{font-size:15rem}.ball{font-size:5rem}.hero-copy{text-align:center}.hero-copy .d-flex{justify-content:center}.hero h1{font-size:6rem}.value{border-right:0}}@media(max-width:575px){.section{padding:65px 0}.hero{min-height:790px}.tiger-frame{min-height:240px}.tiger-emoji{font-size:12rem}.ball{font-size:4rem}.hero h1{font-size:5rem}.hero-location{font-size:.75rem}.brand{font-size:1.4rem}.value{flex-direction:column;gap:5px}.value i{font-size:1.8rem}.crest{width:285px}.crest-tiger{font-size:5rem}.crest strong{font-size:3rem}}
+
+.hero {
+  /* Ganti tulisan di bawah dengan path/url gambar Anda */
+  background-image: url('bgdark.jpeg'); 
+  
+  /* Mengatur tinggi header (50vh = setengah layar, 100vh = satu layar penuh) */
+  height: 100vh; 
+  
+  /* Memastikan gambar menutup seluruh area tanpa terpotong gepeng */
+  background-size: cover; 
+  
+  /* Memastikan posisi gambar tetap berada di tengah */
+  background-position: center; 
+  
+  /* Mencegah gambar berulang/looping */
+  background-repeat: no-repeat; 
+}
+
+
+/* Container kartu gambar */
+.card-gold-only {
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+/* Efek melayang dan bayangan berpendar emas */
+.card-gold-only:hover {
+  transform: scale(1.03); /* Sedikit membesar secara halus */
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.25) !important;
+}
+
+/* Efek transisi halus pada gambar di dalamnya */
+.card-gold-only img {
+  transition: transform 0.6s ease;
+}
+
+.card-gold-only:hover img {
+  transform: scale(1.05); /* Gambar sedikit nge-zoom saat di-hover */
+}
+
+/* Overlay kilau emas transparan */
+.card-overlay-gold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0) 60%, rgba(212, 175, 55, 0.1) 100%);
+  pointer-events: none;
+}
