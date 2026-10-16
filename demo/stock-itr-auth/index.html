@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#07172b" />
+    <title>STOCK-ITR | Inventory Management</title>
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+  </head>
+  <body data-theme="dark" class="app-locked">
+    <section
+      id="authScreen"
+      class="auth-screen"
+      aria-label="Halaman autentikasi"
+    >
+      <div class="auth-shell">
+        <div class="auth-story">
+          <div class="auth-story-inner">
+            <div class="auth-brand">
+              <img src="assets/images/logo.svg" alt="Logo STOCK-ITR" /><span
+                >STOCK-<em>ITR</em
+                ><small>INVENTORY MANAGEMENT SYSTEM</small></span
+              >
+            </div>
+            <span class="auth-tag">✦ SMART INVENTORY PLATFORM</span>
+            <h1>Kelola Inventaris<br /><span>Dengan Lebih Mudah.</span></h1>
+            <p>
+              Pantau stok, kelola barang, dan tingkatkan efisiensi bisnis lewat
+              dashboard inventaris modern.
+            </p>
+            <div class="auth-art" aria-hidden="true">
+              <div class="art-orbit"></div>
+              <div class="art-box art-box-1">▣</div>
+              <div class="art-box art-box-2">▧</div>
+              <div class="art-box art-box-3">▤</div>
+              <div class="art-floor"></div>
+            </div>
+            <div class="auth-points">
+              <span>◈ Desain Premium</span><span>◉ Dual Theme</span
+              ><span>▦ Dashboard Interaktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="auth-side">
+          <div class="auth-top">
+            <span>STOCK-ITR <b>v1.1</b></span
+            ><button
+              type="button"
+              id="authTheme"
+              class="auth-theme"
+              aria-label="Ganti tema"
+            >
+              ☀ / ☾
+            </button>
+          </div>
+          <div class="auth-form-wrap">
+            <div id="authMessage" role="status" aria-live="polite"></div>
+            <section class="auth-panel" data-view="login">
+              <span class="auth-eyebrow">SELAMAT DATANG KEMBALI</span>
+              <h2>Masuk ke akun Anda</h2>
+              <p>Gunakan mode demo untuk menjelajahi seluruh fitur.</p>
+              <form id="loginForm" novalidate>
+                <label for="loginEmail">Email atau Username</label
+                ><input
+                  id="loginEmail"
+                  type="text"
+                  autocomplete="username"
+                  placeholder="nama@email.com"
+                  required
+                /><label for="loginPassword">Password</label>
+                <div class="password-field">
+                  <input
+                    id="loginPassword"
+                    type="password"
+                    autocomplete="current-password"
+                    placeholder="Masukkan password"
+                    required
+                  /><button
+                    type="button"
+                    class="reveal"
+                    data-target="loginPassword"
+                    aria-label="Tampilkan password"
+                  >
+                    ◉
+                  </button>
+                </div>
+                <div class="auth-row">
+                  <label class="check"
+                    ><input id="rememberEmail" type="checkbox" /> Ingat email
+                    saya</label
+                  ><button type="button" class="auth-link" data-go="forgot">
+                    Lupa password?
+                  </button>
+                </div>
+                <button class="auth-primary" type="submit">Masuk →</button>
+              </form>
+              <div class="auth-divider">atau</div>
+              <button class="auth-demo" id="demoBtn" type="button">
+                ▶ Masuk sebagai Demo
+              </button>
+              <p class="auth-switch">
+                Belum punya akun?
+                <button type="button" data-go="register">
+                  Daftar sekarang
+                </button>
+              </p>
+            </section>
+            <section class="auth-panel" data-view="register" hidden>
+              <span class="auth-eyebrow">MULAI SEKARANG</span>
+              <h2>Daftar Akun Baru</h2>
+              <p>Simulasi antarmuka pendaftaran akun STOCK-ITR.</p>
+              <form id="registerForm" novalidate>
+                <label for="regName">Nama Lengkap</label
+                ><input
+                  id="regName"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Nama lengkap"
+                  required
+                  minlength="3"
+                /><label for="regEmail">Email</label
+                ><input
+                  id="regEmail"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="nama@email.com"
+                  required
+                /><label for="regPassword">Password</label>
+                <div class="password-field">
+                  <input
+                    id="regPassword"
+                    type="password"
+                    autocomplete="new-password"
+                    placeholder="Minimal 8 karakter"
+                    minlength="8"
+                    required
+                  /><button
+                    type="button"
+                    class="reveal"
+                    data-target="regPassword"
+                    aria-label="Tampilkan password"
+                  >
+                    ◉
+                  </button>
+                </div>
+                <div class="strength"><i id="strengthBar"></i></div>
+                <small id="strengthText" class="strength-label"
+                  >Gunakan kombinasi huruf, angka, dan simbol.</small
+                ><label for="regConfirm">Konfirmasi Password</label>
+                <div class="password-field">
+                  <input
+                    id="regConfirm"
+                    type="password"
+                    autocomplete="new-password"
+                    placeholder="Ulangi password"
+                    required
+                  /><button
+                    type="button"
+                    class="reveal"
+                    data-target="regConfirm"
+                    aria-label="Tampilkan password"
+                  >
+                    ◉
+                  </button>
+                </div>
+                <label class="check terms"
+                  ><input id="agree" type="checkbox" required /> Saya memahami
+                  ini hanya demo front-end</label
+                ><button class="auth-primary" type="submit">
+                  Daftar (Simulasi) →
+                </button>
+              </form>
+              <p class="auth-switch">
+                Sudah punya akun?
+                <button type="button" data-go="login">Masuk sekarang</button>
+              </p>
+            </section>
+            <section class="auth-panel" data-view="forgot" hidden>
+              <span class="auth-eyebrow">BANTUAN AKUN</span>
+              <div class="auth-emoji">🔐</div>
+              <h2>Lupa Password?</h2>
+              <p>Isi email untuk melihat simulasi alur reset password.</p>
+              <form id="forgotForm" novalidate>
+                <label for="forgotEmail">Alamat Email</label
+                ><input
+                  id="forgotEmail"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="nama@email.com"
+                  required
+                /><button class="auth-primary" type="submit">
+                  Simulasikan Reset →
+                </button>
+              </form>
+              <p class="auth-switch">
+                <button type="button" data-go="login">
+                  ← Kembali ke Login
+                </button>
+              </p>
+            </section>
+            <section class="auth-panel" data-view="verify" hidden>
+              <span class="auth-eyebrow">KONFIRMASI</span>
+              <div class="auth-emoji">✉️</div>
+              <h2>Simulasi Email Terkirim!</h2>
+              <p>
+                Ini hanya demonstrasi UI. Tidak ada email sungguhan yang dikirim
+                dan tidak ada akun yang dibuat.
+              </p>
+              <button class="auth-primary" type="button" data-go="login">
+                Kembali ke Login →
+              </button>
+            </section>
+          </div>
+          <div class="auth-foot">
+            © <span id="authYear"></span> STOCK-ITR · Developed by Ilyas
+            Taufiqur Rahman<br /><small
+              >Front-end demo • Tidak menyimpan password • Tanpa autentikasi
+              server</small
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="app">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#dashboard"
+          ><img src="assets/images/logo.svg" alt="STOCK-ITR" /><span
+            >STOCK-<b>ITR</b><small>INVENTORY MANAGEMENT</small></span
+          ></a
+        >
+        <div class="nav-title">MENU UTAMA</div>
+        <nav id="nav">
+          <button data-page="dashboard" class="active">
+            <span>▦</span> Dashboard</button
+          ><button data-page="products"><span>▣</span> Manajemen Produk</button
+          ><button data-page="in"><span>↙</span> Barang Masuk</button
+          ><button data-page="out"><span>↗</span> Barang Keluar</button
+          ><button data-page="categories"><span>◈</span> Kategori</button
+          ><button data-page="reports"><span>▥</span> Laporan</button
+          ><button data-page="settings"><span>⚙</span> Pengaturan</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <button id="themeSidebar" class="theme-sidebar">
+            ☾ <span>Ganti Tema</span> <strong>◉</strong>
+          </button>
+          <div class="version">
+            STOCK-ITR <span>v1.0.0</span><small>Front-End Portfolio Demo</small>
+          </div>
+        </div>
+      </aside>
+      <div class="sidebar-shade" id="shade"></div>
+      <div class="main">
+        <header class="topbar">
+          <button
+            id="menuToggle"
+            class="icon-btn menu-toggle"
+            aria-label="Buka menu"
+          >
+            ☰
+          </button>
+          <div class="search-box">
+            ⌕
+            <input
+              id="globalSearch"
+              placeholder="Cari produk, kategori, atau kode..."
+              aria-label="Cari produk"
+            /><kbd>Ctrl K</kbd>
+          </div>
+          <div class="top-actions">
+            <span class="today" id="today"></span
+            ><button id="themeToggle" class="icon-btn" title="Ganti tema">
+              ☀</button
+            ><button
+              id="notifToggle"
+              class="icon-btn notification"
+              title="Notifikasi"
+            >
+              ♧<i id="notifDot"></i></button
+            ><button id="logoutBtn" class="logout-btn" title="Keluar dari demo">
+              ⇥ Keluar
+            </button>
+            <div class="avatar">ITR</div>
+            <div class="profile">
+              Ilyas Taufiqur Rahman<small>Administrator · Demo</small>
+            </div>
+          </div>
+        </header>
+        <main id="content"></main>
+        <footer>
+          © <span id="year"></span> STOCK-ITR · Developed by
+          <b>Ilyas Taufiqur Rahman</b> · Data demo tersimpan di browser ini.
+        </footer>
+      </div>
+    </div>
+    <div id="toastArea" class="toast-area" aria-live="polite"></div>
+    <div id="modalLayer"></div>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/auth.js"></script>
+  </body>
+</html>

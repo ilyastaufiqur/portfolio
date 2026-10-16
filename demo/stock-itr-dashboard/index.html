@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#07172b" />
+    <title>STOCK-ITR | Inventory Management</title>
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-theme="dark">
+    <div class="app">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#dashboard"
+          ><img src="assets/images/logo.svg" alt="STOCK-ITR" /><span
+            >STOCK-<b>ITR</b><small>INVENTORY MANAGEMENT</small></span
+          ></a
+        >
+        <div class="nav-title">MENU UTAMA</div>
+        <nav id="nav">
+          <button data-page="dashboard" class="active">
+            <span>▦</span> Dashboard</button
+          ><button data-page="products"><span>▣</span> Manajemen Produk</button
+          ><button data-page="in"><span>↙</span> Barang Masuk</button
+          ><button data-page="out"><span>↗</span> Barang Keluar</button
+          ><button data-page="categories"><span>◈</span> Kategori</button
+          ><button data-page="reports"><span>▥</span> Laporan</button
+          ><button data-page="settings"><span>⚙</span> Pengaturan</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <button id="themeSidebar" class="theme-sidebar">
+            ☾ <span>Ganti Tema</span> <strong>◉</strong>
+          </button>
+          <div class="version">
+            STOCK-ITR <span>v1.0.0</span><small>Front-End Portfolio Demo</small>
+          </div>
+        </div>
+      </aside>
+      <div class="sidebar-shade" id="shade"></div>
+      <div class="main">
+        <header class="topbar">
+          <button
+            id="menuToggle"
+            class="icon-btn menu-toggle"
+            aria-label="Buka menu"
+          >
+            ☰
+          </button>
+          <div class="search-box">
+            ⌕
+            <input
+              id="globalSearch"
+              placeholder="Cari produk, kategori, atau kode..."
+              aria-label="Cari produk"
+            /><kbd>Ctrl K</kbd>
+          </div>
+          <div class="top-actions">
+            <span class="today" id="today"></span
+            ><button id="themeToggle" class="icon-btn" title="Ganti tema">
+              ☀</button
+            ><button
+              id="notifToggle"
+              class="icon-btn notification"
+              title="Notifikasi"
+            >
+              ♧<i id="notifDot"></i>
+            </button>
+            <div class="avatar">ITR</div>
+            <div class="profile">
+              Ilyas Taufiqur Rahman<small>Administrator · Demo</small>
+            </div>
+          </div>
+        </header>
+        <main id="content"></main>
+        <footer>
+          © <span>2024</span> STOCK-ITR · Developed by
+          <b>Ilyas Taufiqur Rahman</b> · Data demo tersimpan di browser ini.
+        </footer>
+      </div>
+    </div>
+    <div id="toastArea" class="toast-area" aria-live="polite"></div>
+    <div id="modalLayer"></div>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
