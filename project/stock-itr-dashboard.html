@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Portofolio proyek front-end STOCK-ITR oleh Ilyas Taufiqur Rahman"
+    />
+    <title>STOCK-ITR — Inventory Dashboard | ITR Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/project-css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark site-nav fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"
+          >ITR<span>.</span> PORTFOLIO</a
+        ><button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#siteMenu"
+          aria-controls="siteMenu"
+          aria-expanded="false"
+          aria-label="Buka navigasi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteMenu">
+          <div class="navbar-nav ms-auto gap-lg-3">
+            <a class="nav-link" href="../index.html">Beranda</a
+            ><a class="nav-link" href="../index.html#project">Semua Project</a
+            ><a class="nav-link" href="../index.html#tentang">Tentang</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header class="hero">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center mb-4">
+            <li class="breadcrumb-item"><a href="../index.html">Beranda</a></li>
+            <li class="breadcrumb-item">
+              <a href="../index.html#project">Project</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Front-End Web Application
+            </li>
+          </ol>
+        </nav>
+        <div class="text-center">
+          <span class="tag"
+            ><i class="bi bi-stars"></i>Front-End Web Application</span
+          >
+          <h1 class="mt-4">
+            STOCK-ITR<br /><span class="accent">Inventory Dashboard</span>
+          </h1>
+          <p class="lead">
+            Dashboard Manajemen Stok Interaktif. Studi kasus front-end STOCK-ITR
+            dengan dokumentasi visual, fitur, dan proses pengembangan dalam
+            bahasa Indonesia.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a class="btn btn-gold" href="#demo"
+              ><i class="bi bi-box-arrow-up-right me-2"></i>Lihat Demo & Kode</a
+            ><a class="btn btn-line" href="#galeri"
+              ><i class="bi bi-images me-2"></i>Lihat Galeri</a
+            >
+          </div>
+        </div>
+        <div class="hero-shot">
+          <img
+            src="../assets/img/project-image/dashboard/dashboard.png"
+            alt="Preview STOCK-ITR — Inventory Dashboard"
+          />
+        </div>
+      </div>
+    </header>
+    <section class="section" id="ringkasan">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-8">
+            <span class="eyebrow">01 / Tentang Proyek</span>
+            <h2 class="section-title">
+              Ringkasan <span class="accent">Project</span>
+            </h2>
+            <p>
+              STOCK-ITR Inventory Dashboard merupakan proyek aplikasi inventaris
+              berbasis web yang dirancang untuk menampilkan ringkasan stok, data
+              produk, pergerakan barang, dan laporan dalam satu antarmuka yang
+              terstruktur.
+            </p>
+            <p>
+              Proyek ini berfokus pada implementasi front-end interaktif
+              menggunakan HTML, CSS, Bootstrap, dan JavaScript. Pada versi demo
+              tanpa backend, data inventaris dapat dikelola secara lokal melalui
+              penyimpanan browser.
+            </p>
+            <div class="callout mt-4">
+              <i class="bi bi-lightbulb me-2"></i>Proyek ini merupakan bagian
+              dari ekosistem STOCK-ITR. Halaman Authentication UI dan Inventory
+              Dashboard didokumentasikan secara terpisah agar masing-masing
+              fokus pengembangan terlihat jelas.
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="glass-card">
+              <h3 class="h5 mb-4">Informasi Proyek</h3>
+              <div class="meta-row">
+                <span>Pengembang</span><strong>Ilyas Taufiqur Rahman</strong>
+              </div>
+              <div class="meta-row">
+                <span>Kategori</span><strong>Front-End Web Application</strong>
+              </div>
+              <div class="meta-row">
+                <span>Jenis</span><strong>Proyek Portofolio</strong>
+              </div>
+              <div class="meta-row">
+                <span>Backend</span><strong>Tidak digunakan</strong>
+              </div>
+              <div class="meta-row">
+                <span>Status</span><strong>Demo Front-End</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section alt">
+      <div class="container">
+        <span class="eyebrow">02 / Teknologi</span>
+        <h2 class="section-title">
+          Teknologi yang <span class="accent">Digunakan</span>
+        </h2>
+        <p class="section-intro mb-4">
+          Teknologi untuk membangun tampilan, tata letak, dan interaksi
+          antarmuka pada versi demo.
+        </p>
+        <div class="tech-list">
+          <span>HTML5</span><span>CSS3</span><span>Bootstrap 5</span
+          ><span>JavaScript</span><span>Chart.js</span><span>LocalStorage</span>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">03 / Fitur</span>
+        <h2 class="section-title">Fitur <span class="accent">Utama</span></h2>
+        <p class="section-intro mb-5">
+          Berikut gambaran komponen dan pengalaman pengguna yang ditonjolkan
+          dalam project ini.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card">
+              <div class="icon"><i class="bi bi-speedometer2"></i></div>
+              <h3 class="h5">Ringkasan Dashboard</h3>
+              <p class="mb-0">
+                Kartu statistik untuk memantau jumlah produk, stok tersedia, dan
+                aktivitas inventaris.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card">
+              <div class="icon"><i class="bi bi-box-seam"></i></div>
+              <h3 class="h5">Manajemen Produk</h3>
+              <p class="mb-0">
+                Konsep pengelolaan daftar produk dengan informasi nama,
+                kategori, dan jumlah stok.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card">
+              <div class="icon"><i class="bi bi-arrow-left-right"></i></div>
+              <h3 class="h5">Stok Masuk & Keluar</h3>
+              <p class="mb-0">
+                Pencatatan perubahan stok untuk memudahkan pemantauan alur
+                barang.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card">
+              <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <h3 class="h5">Visualisasi Data</h3>
+              <p class="mb-0">
+                Grafik ringkas untuk membaca tren pergerakan inventaris.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card">
+              <div class="icon"><i class="bi bi-exclamation-triangle"></i></div>
+              <h3 class="h5">Indikator Stok Menipis</h3>
+              <p class="mb-0">
+                Penanda visual untuk produk yang perlu segera diperiksa atau
+                ditambah.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card">
+              <div class="icon">
+                <i class="bi bi-file-earmark-bar-graph"></i>
+              </div>
+              <h3 class="h5">Laporan Inventaris</h3>
+              <p class="mb-0">
+                Penyajian ringkasan data dan laporan aktivitas stok dalam tabel
+                yang mudah dibaca.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section alt">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-lg-2">
+            <span class="eyebrow">Fokus Antarmuka</span>
+            <h2 class="section-title">
+              Informasi stok dalam <span class="accent">satu tampilan</span>
+            </h2>
+            <p>
+              Dashboard dirancang agar informasi utama terlihat lebih dulu:
+              jumlah produk, ketersediaan stok, stok menipis, dan aktivitas
+              transaksi. Tabel serta grafik ditempatkan pada bagian terpisah
+              untuk menjaga keterbacaan.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Hierarki visual yang
+                jelas
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Komponen statistik yang
+                konsisten
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Desain desktop dan mobile
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="showcase-img">
+              <img
+                loading="lazy"
+                src="../assets/img/project-image/dashboard/products.png"
+                alt="Contoh manajemen produk STOCK-ITR"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="galeri">
+      <div class="container">
+        <span class="eyebrow">04 / Dokumentasi Visual</span>
+        <h2 class="section-title">
+          Galeri <span class="accent">Project</span>
+        </h2>
+        <p class="section-intro mb-5">
+          Klik gambar untuk memperbesar. Semua gambar berikut merupakan
+          <strong>contoh ilustrasi UI</strong> yang dapat kamu ganti dengan
+          screenshot aplikasi asli.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div
+              class="gallery-item"
+              role="button"
+              tabindex="0"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-image="../assets/img/project-image/dashboard/dashboard.png"
+              data-title="Dashboard — Dark Mode"
+              aria-label="Perbesar gambar Dashboard — Dark Mode"
+            >
+              <img
+                loading="lazy"
+                src="../assets/img/project-image/dashboard/dashboard.png"
+                alt="Contoh screenshot Dashboard — Dark Mode"
+              />
+              <div class="caption">
+                Dashboard — Dark Mode<small
+                  >Ringkasan data dan grafik aktivitas.</small
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="gallery-item"
+              role="button"
+              tabindex="0"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-image="../assets/img/project-image/dashboard/dashboard-light.png"
+              data-title="Dashboard — Light Mode"
+              aria-label="Perbesar gambar Dashboard — Light Mode"
+            >
+              <img
+                loading="lazy"
+                src="../assets/img/project-image/dashboard/dashboard-light.png"
+                alt="Contoh screenshot Dashboard — Light Mode"
+              />
+              <div class="caption">
+                Dashboard — Light Mode<small
+                  >Alternatif tema terang untuk dashboard.</small
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="gallery-item"
+              role="button"
+              tabindex="0"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-image="../assets/images/dashboard/products.png"
+              data-title="Manajemen Produk"
+              aria-label="Perbesar gambar Manajemen Produk"
+            >
+              <img
+                loading="lazy"
+                src="../assets/img/project-image/dashboard/products.png"
+                alt="Contoh screenshot Manajemen Produk"
+              />
+              <div class="caption">
+                Manajemen Produk<small>Contoh tabel dan daftar barang.</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="gallery-item"
+              role="button"
+              tabindex="0"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-image="../assets/images/dashboard/reports.png"
+              data-title="Laporan Inventaris"
+              aria-label="Perbesar gambar Laporan Inventaris"
+            >
+              <img
+                loading="lazy"
+                src="../assets/img/project-image/dashboard/reports.png"
+                alt="Contoh screenshot Laporan Inventaris"
+              />
+              <div class="caption">
+                Laporan Inventaris<small>Contoh ringkasan laporan stok.</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="gallery-item"
+              role="button"
+              tabindex="0"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-image="../assets/images/dashboard/dashboard-mobile.png"
+              data-title="Dashboard — Mobile"
+              aria-label="Perbesar gambar Dashboard — Mobile"
+            >
+              <img
+                loading="lazy"
+                src="../assets/img/project-image/dashboard/dashboard-mobile.png"
+                alt="Contoh screenshot Dashboard — Mobile"
+              />
+              <div class="caption">
+                Dashboard — Mobile<small
+                  >Contoh tata letak responsif pada ponsel.</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade gallery-modal"
+          id="imageModal"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button
+                  class="btn-close btn-close-white"
+                  type="button"
+                  data-bs-dismiss="modal"
+                  aria-label="Tutup"
+                ></button>
+              </div>
+              <div class="modal-body p-2"><img src="" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section alt">
+      <div class="container">
+        <span class="eyebrow">05 / Proses Pengembangan</span>
+        <h2 class="section-title">
+          Tantangan & <span class="accent">Solusi</span>
+        </h2>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="glass-card">
+              <span class="eyebrow">Tantangan 01</span>
+              <h3 class="h5 mt-3">Menata informasi yang padat</h3>
+              <p>
+                Memisahkan ringkasan, tabel, dan grafik menjadi komponen yang
+                mudah dipindai.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="glass-card">
+              <span class="eyebrow">Tantangan 02</span>
+              <h3 class="h5 mt-3">Mengelola data tanpa server</h3>
+              <p>
+                Menggunakan JavaScript dan LocalStorage sebagai penyimpanan
+                lokal untuk kebutuhan demonstrasi.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="glass-card">
+              <span class="eyebrow">Tantangan 03</span>
+              <h3 class="h5 mt-3">Mendukung beragam ukuran layar</h3>
+              <p>
+                Menerapkan grid responsif dan pengaturan ruang agar tampilan
+                tetap terbaca.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="demo">
+      <div class="container text-center">
+        <span class="eyebrow">06 / Jelajahi</span>
+        <h2 class="section-title">Coba <span class="accent">Project</span></h2>
+        <p class="mx-auto mb-4" style="max-width: 670px">
+          Berikut adalah demo aplikasinya silahkan di gunakan sebagai refrensi
+          dan gunakan dengan bijak
+        </p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+          <a
+            class="btn btn-gold"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="../demo/stock-itr-dashboard/index.html"
+            ><i class="bi bi-box-arrow-up-right me-2"></i>Live Demo</a
+          ><a class="btn btn-line" href="../index.html#kontak"
+            ><i class="bi bi-github me-2"></i>Source Code</a
+          >
+        </div>
+        <div class="mt-5">
+          <p class="mb-3">Lihat juga bagian STOCK-ITR lainnya:</p>
+          <a class="btn btn-line" href="stock-itr-auth.html"
+            ><i class="bi bi-arrow-right me-2"></i>Authentication UI</a
+          >
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div
+        class="container d-flex flex-column flex-md-row gap-2 justify-content-between align-items-center"
+      >
+        <span>© <span data-year>2026</span> Ilyas Taufiqur Rahman</span
+        ><span>Dirancang & dikembangkan oleh ITR • Front-End Portfolio</span>
+      </div>
+    </footer>
+    <button class="scroll-top" aria-label="Kembali ke atas">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/project-js/main.js"></script>
+  </body>
+</html>
