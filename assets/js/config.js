@@ -12,5 +12,5 @@ window.PORTFOLIO_CONFIG = {
   instagram: 'https://www.instagram.com/ilyastaufiqurrhmn_?cplk=MTE1Zmg5cDlhNGJ0cg==', // tautan lengkap profil Instagram
   linkedin: '', // tautan lengkap profil LinkedIn
   github: 'https://github.com/ilyastaufiqur', // tautan lengkap profil GitHub
-  cvFile: 'assets/cv/CV_Ilyas-Taufiqur-Rahman.pdf'
+  cvFile: 'assets/cv/CV-ILYAS_TAUFIQUR_RAHMAN.pdf'
 };
